@@ -4,6 +4,7 @@ import requests
 from selenium import webdriver
 import time
 import smtplib
+import os
 
 
 NUM_ADULTI = 4
@@ -11,8 +12,8 @@ CHECK_IN = '2023-11-01'
 CHECK_OUT = '2023-11-03'
 COSTO_TOT_MAX = 700
 
-SENDER = # fill with sender mail
-SENDER_PW = # fill with sender password, needed to send mail from 3rd party application (as a python script)
+SENDER =  # fill with sender mail
+SENDER_PW = os.getenv("gmail_pw_app")  # fill with sender password, needed to send mail from 3rd party application (as a python script)
 RECIPIENT = # fill recipient mail (as a list if more than one)
 
 headers = {
